@@ -10,16 +10,35 @@ va applicato uno sconto del 40% per gli over 65.
 
 //Il numero di chilometri da percorrere
 
-const kmDOM =document.getElementById('km');
+const kmDOM =Number(prompt('km'));
 
 console.log(kmDOM);
 
 // età del passeggiero
 
-const ageUserDOM = document.getElementById('ageUser');
-
-let tot = kmDOM + ageUserDOM;
+const ageUserDOM = Number(prompt('ageUser'));
 
 console.log(kmDOM,ageUserDOM);
 
-console.log(tot);
+let temporaryPrice = kmDOM * 0.21;
+
+//calcolo il prezzo in base all'età
+
+let priceAge;
+
+if ( ageUserDOM < 18 ) {
+    
+    priceAge = temporaryPrice * 0.8;
+
+} else if( ageUserDOM >= 65 ) {
+
+    priceAge = temporaryPrice * 0.6;
+    
+} else{
+    priceAge = temporaryPrice;
+}
+
+//stampo il prezzo
+const resultDOM = document.getElementById('priceResult');
+
+resultDOM.innerHTML = 'il prezzo è ' + priceAge.toFixed(2) + ' €';
