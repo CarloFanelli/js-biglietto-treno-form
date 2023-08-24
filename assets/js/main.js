@@ -16,21 +16,27 @@ va applicato uno sconto del 40% per gli over 65.
 
 let priceAge;
 
-const kmDOM = document.getElementById('km').valueAsNumber;
+document.getElementById('priceButton').addEventListener('click', function (e) {
 
-const ageUserDOM = document.getElementById('ageUser').valueAsNumber;
+   // console.log('ciao'); - debug
 
-document.getElementById('myForm').addEventListener('onclick', function calcPrice(){
+    const kmDOM = document.getElementById('km').valueAsNumber;
+
+    console.log(kmDOM);
+
+    const ageUserDOM = document.getElementById('ageUser').value;
+
+    console.log(ageUserDOM);
 
     const kmPrice = 0.21;
 
     let temporaryPrice = kmDOM * kmPrice;
 
-    if (ageUserDOM < 18) {
+    if (ageUserDOM == 'minorenne') {
 
         priceAge = temporaryPrice * 0.8;
 
-    } else if (ageUserDOM >= 65) {
+    } else if (ageUserDOM == 'over65') {
 
         priceAge = temporaryPrice * 0.6;
 
@@ -38,8 +44,12 @@ document.getElementById('myForm').addEventListener('onclick', function calcPrice
         priceAge = temporaryPrice;
     }
 
-    //stampo il prezzo
+    //stampo il prezzo e i dettagli
     const resultDOM = document.getElementById('priceResult');
+
+    const nomePasseggieroDOM = document.getElementById('userName').value;
+
+    console.log('nomePasseggieroDOM');
 
     resultDOM.innerHTML = 'il prezzo è ' + priceAge.toFixed(2) + ' €';
 });

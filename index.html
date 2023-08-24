@@ -4,16 +4,73 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Biglietteria Treno</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+
     </head>
     <body>
+        <div class="container p1">
+            <div class="row p1">
+                <div class="col-8">
+                    <h1>Calcola il prezzo del tuo biglietto</h1>
+                </div>
+            </div>
+            <div class="row p1">
+                <div class="col-8  d-flex align-center bg-white">
+                    <div id="myForm" class=" d-flex ">
+                        <div class="d-flex flex-col">
+                            <label for="userName">nome del viaggiatore</label>
+                            <input type="text" id="userName"
+                                placeholder="nome e cognome">
+                        </div>
 
-        <div id="myForm">
-            <input type="number" id="km" placeholder="km">
-            <input type="number" id="ageUser" placeholder="età">
-            <button id="priceButton" onclick="calcPrice()">Calcola il prezzo</button>
+                        <div class="d-flex flex-col">
+                            <label for="km">Distanza in km</label>
+                            <input type="number" id="km" placeholder="km">
+                        </div>
+
+                        <div class="d-flex flex-col">
+                            <label for="ageUser">Età dell'utente</label>
+                            <select name="ageUser" id="ageUser">
+                                <option value="minorenne">minorenne</option>
+                                <option value="maggiorenne">maggiorenne</option>
+                                <option value="over65">over 65</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-8 bg-white">
+
+                    <button id="priceButton">Calcola il prezzo</button>
+                </div>
+
+            </div>
+
         </div>
 
-        <h4 id="priceResult"></h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <h2>il tuo biglietto</h2>
+                </div>
+                <div class="col-8">
+
+                    <div>
+                        <h3>Nome Passeggiero</h3>
+                        <h4 id="nomePasseggiero"></h4>
+                    </div>
+                    <div>
+                        <h3>Carrozza</h3>
+                        <h4 id="carrozza"></h4>
+                    </div>
+                    <div></div>
+                    <div></div>
+
+                    <h4 id="priceResult"></h4>
+                </div>
+            </div>
+        </div>
 
         <script type="text/javascript" src="./assets/js/main.js"></script>
     </body>
