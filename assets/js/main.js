@@ -16,11 +16,11 @@ va applicato uno sconto del 40% per gli over 65.
 
 let priceAge;
 
-document.getElementById('myForm').addEventListener('submit', function () {
+const kmDOM = document.getElementById('km').valueAsNumber;
 
-    const kmDOM = document.getElementById('km').value;
+const ageUserDOM = document.getElementById('ageUser').valueAsNumber;
 
-    const ageUserDOM = document.getElementById('ageUser').value;
+document.getElementById('myForm').addEventListener('onclick', function calcPrice(){
 
     const kmPrice = 0.21;
 
