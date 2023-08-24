@@ -18,8 +18,8 @@
                 <div class="col-8  d-flex align-center bg-white">
                     <div id="myForm" class=" d-flex ">
                         <div class="d-flex flex-col">
-                            <label for="userName">nome del viaggiatore</label>
-                            <input type="text" id="userName"
+                            <label for="username">nome del viaggiatore</label>
+                            <input type="text" id="username"
                                 placeholder="nome e cognome">
                         </div>
 
@@ -30,12 +30,12 @@
 
                         <div class="d-flex flex-col">
                             <label for="ageUser">Età dell'utente</label>
-                            <select name="ageUser" id="ageUser">
+                            <select id="ageUser">
                                 <option value="minorenne">minorenne</option>
                                 <option value="maggiorenne">maggiorenne</option>
                                 <option value="over65">over 65</option>
                             </select>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -51,23 +51,26 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-8">
+                <div class="col-8 bg-white">
                     <h2>il tuo biglietto</h2>
                 </div>
-                <div class="col-8">
+                <div class="col-8 d-flex bg-white space-evenly">
 
                     <div>
                         <h3>Nome Passeggiero</h3>
                         <h4 id="nomePasseggiero"></h4>
                     </div>
+
                     <div>
                         <h3>Carrozza</h3>
-                        <h4 id="carrozza"></h4>
+                        <h4 id="carrozza"></h4> 
+                    </div>
+                    <div>
+                        <h3>prezzo</h3>
+                        <h4 id="priceResult"></h4>
                     </div>
                     <div></div>
-                    <div></div>
 
-                    <h4 id="priceResult"></h4>
                 </div>
             </div>
         </div>

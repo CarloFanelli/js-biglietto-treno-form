@@ -31,6 +31,10 @@ h1{
     justify-content: center;
 }
 
+.space-evenly{
+    justify-content: space-evenly;
+}
+
 .row{
 padding: 1rem;
 }
@@ -49,4 +53,4 @@ padding: 1rem;
 
 .col-8>*{
     text-align: center;
-}
+} 
